@@ -93,7 +93,7 @@ const WordScramble = () => {
             />
             <button
               onClick={handleGuess}
-              className="bg-black text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              className="bg-black/70 text-white px-4 py-2 rounded-md hover:bg-black"
             >
               Submit Guess
             </button>
