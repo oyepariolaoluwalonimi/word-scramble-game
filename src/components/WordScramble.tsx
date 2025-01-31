@@ -77,10 +77,13 @@ const WordScramble = () => {
           </div>
         ) : (
           <>
+          <div className='justify-between flex'>
             <p className="text-xl font-semibold mb-2">Scrambled Word:</p>
-            <p className="text-2xl font-bold text-blue-600 mb-4">{scrambledWord}</p>
+            <p className="text-sm text-red-600 mb-4 font-bold">Time Left: {timer}s</p>
+          </div>
+            <p className="text-2xl text-center font-bold text-blue-600 mb-4">{scrambledWord}</p>
             <p className="text-sm text-gray-600 mb-4">Hint: {hint}</p>
-            <p className="text-sm text-red-600 mb-4">Time Left: {timer}s</p>
+
             <input
               type="text"
               value={guess}
@@ -90,7 +93,7 @@ const WordScramble = () => {
             />
             <button
               onClick={handleGuess}
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              className="bg-black text-white px-4 py-2 rounded-md hover:bg-blue-600"
             >
               Submit Guess
             </button>
