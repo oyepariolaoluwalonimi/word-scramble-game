@@ -8,14 +8,14 @@ type GameState = {
   score: number;
   timer: number;
   isTimeUp: boolean;
-  scrambleWord: () => any;
-  decrementTimer: () => any;
-  resetGame: () => any;
+  scrambleWord: () => void;
+  decrementTimer: () => void;
+  resetGame: () => void;
   checkGuess: (guess: string) => boolean;
 };
 
 const shuffle = (word: string) => word.split('').sort(() => Math.random() - 0.5).join('');
-
+    
 export const useGameStore = create<GameState>((set, get) => ({
     words: [
         { word: 'elephant', hint: 'A large mammal with a trunk' },
